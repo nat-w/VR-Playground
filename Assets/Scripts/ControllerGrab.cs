@@ -59,7 +59,7 @@ public class ControllerGrab : MonoBehaviour {
 
 	// Destroys joint
 	private void ReleaseObject() {
-		if (GetComponent<FixedJoint>()) {
+		if (!GetComponent<FixedJoint>()) {
 			return;
 		}
 		// Destroys the joint, freeing the object
