@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseStationPosition : MonoBehaviour {
+	Transform pos;
+
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		pos = GetComponent<Transform>();
+		Debug.Log(pos);
 	}
 }

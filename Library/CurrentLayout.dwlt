@@ -212,7 +212,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 68
+  controlID: 95
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -286,9 +286,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: e6fbffff00000000
+    m_SelectedIDs: 3e320000
+    m_LastClickedID: 12862
+    m_ExpandedIDs: daf8fffffcf8ffff84f9ffff000000001e32000058320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -304,7 +304,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 2}
     m_SearchString: 
   m_ExpandedScenes:
   - MainScene
@@ -383,20 +383,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/SteamVR/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/SteamVR/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/nat/Desktop/Projects/Unity/vr_playground
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 600e0000
-    m_LastClickedID: 3680
-    m_ExpandedIDs: 000000001e0a00004e0b0000be0b0000600e0000be0f0000
+    scrollPos: {x: 0, y: 263}
+    m_SelectedIDs: ba2b0000
+    m_LastClickedID: 11194
+    m_ExpandedIDs: 00000000242b0000542c0000c42c0000222f0000662f0000c4300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -424,7 +424,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e0a00004e0b0000be0b0000600e0000be0f0000
+    m_ExpandedIDs: 00000000242b0000542c0000c42c0000662f0000c4300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 43.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 146
 --- !u!114 &15
@@ -589,9 +589,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1135604, y: -0.38487458, z: -4.6863008}
+    m_Target: {x: 5.6427264, y: -3.0392747, z: 1.3719349}
     speed: 2
-    m_Value: {x: 1.1135604, y: -0.38487458, z: -4.6863008}
+    m_Value: {x: 5.6427264, y: -3.0392747, z: 1.3719349}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -619,13 +619,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.0022684447, y: 0.9888325, z: -0.14824405, w: 0.015130888}
+    m_Target: {x: 0.23586011, y: 0.6309683, z: -0.21001397, w: 0.70862067}
     speed: 2
-    m_Value: {x: 0.002268445, y: 0.98883253, z: -0.14824405, w: 0.015130889}
+    m_Value: {x: 0.23586011, y: 0.6309683, z: -0.21001397, w: 0.70862067}
   m_Size:
-    m_Target: 8.280849
+    m_Target: 12.424853
     speed: 2
-    m_Value: 8.280849
+    m_Value: 12.424853
   m_Ortho:
     m_Target: 0
     speed: 2
