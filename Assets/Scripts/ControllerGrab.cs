@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ControllerGrab : MonoBehaviour {
 	private SteamVR_TrackedObject trackedObj;
+	private Vector3 velocity;
+	private Vector3 angularVelocity;
+
 	// Object that controller is colliding with
 	private GameObject collidingObj;
 	// Object that player is currently grabbing
@@ -13,9 +16,7 @@ public class ControllerGrab : MonoBehaviour {
 		get { return SteamVR_Controller.Input((int)trackedObj.index);}
 	}
 	
-	void Awake() {
-		trackedObj = GetComponent<SteamVR_TrackedObject>();
-	}
+	
 	// Check if colliding object exists and has a rigid body
 	private void SetCollidingObject(Collider other) {
 		if (collidingObj || !other.GetComponent<Rigidbody>()) {
@@ -67,9 +68,19 @@ public class ControllerGrab : MonoBehaviour {
 		Destroy(GetComponent<FixedJoint>());
 
 		// Changes velcity of object (throwing) 
-		objInHand.GetComponent<Rigidbody>().velocity = Controller.velocity;
-		objInHand.GetComponent<Rigidbody>().angularVelocity = Controller.angularVelocity;
+		objInHand.GetComponent<Rigidbody>().velocity -= velocity;
+		objInHand.GetComponent<Rigidbody>().angularVelocity -= angularVelocity;
 		objInHand = null;
+	}
+
+	void Awake() {
+		trackedObj = GetComponent<SteamVR_TrackedObject>();
+	}
+
+	// Update velocity each physics frame
+	void FixedUpdate() {
+		velocity = Controller.velocity;
+		angularVelocity = Controller.angularVelocity;	
 	}
 
 	// Update is called once per frame
