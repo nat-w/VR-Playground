@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseStationPosition : MonoBehaviour {
-	Transform pos;
+	Transform transform;
 
 
 	// Use this for initialization
 	void Start () {
-		pos = GetComponent<Transform>();
-		Debug.Log(pos);
+		transform = GetComponent<Transform>();
+		Debug.Log(transform.position);
 	}
 }
