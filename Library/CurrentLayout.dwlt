@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 481, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 69
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,8 +251,8 @@ MonoBehaviour:
     y: 0
     width: 959
     height: 721
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -286,9 +286,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6af9ffff
-    m_LastClickedID: -1686
-    m_ExpandedIDs: 7cf9ffff00000000
+    m_SelectedIDs: 501100004e110000
+    m_LastClickedID: 4430
+    m_ExpandedIDs: b0fbffffd2fbffffe4fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -383,20 +383,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/nat/Desktop/Projects/Unity/vr_playground
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 222c0000
-    m_LastClickedID: 11298
-    m_ExpandedIDs: 00000000262b0000562c0000c62c0000682f0000c6300000
+    m_SelectedIDs: f20d0000
+    m_LastClickedID: 3570
+    m_ExpandedIDs: 00000000200a0000500b0000c00b0000620e0000c00f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -424,7 +424,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000262b0000562c0000c62c0000682f0000c6300000
+    m_ExpandedIDs: 00000000200a0000500b0000c00b0000620e0000c00f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -584,14 +584,14 @@ MonoBehaviour:
     height: 700
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 69.78000700473785
+  lastFramingTime: 15788.808131933212
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.6427264, y: -3.0392747, z: 1.3719349}
+    m_Target: {x: 0.20871454, y: 0.035000026, z: 1.3946807}
     speed: 2
-    m_Value: {x: 5.6427264, y: -3.0392747, z: 1.3719349}
+    m_Value: {x: 0.20871454, y: 0.035000026, z: 1.3946807}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -619,13 +619,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.23586011, y: 0.6309683, z: -0.21001397, w: 0.70862067}
+    m_Target: {x: 0.20076355, y: 0.55695295, z: -0.1409148, w: 0.7934988}
     speed: 2
-    m_Value: {x: 0.23586012, y: 0.6309683, z: -0.21001397, w: 0.70862067}
+    m_Value: {x: 0.20076357, y: 0.556953, z: -0.14091481, w: 0.7934989}
   m_Size:
-    m_Target: 15.081014
+    m_Target: 2.8578837
     speed: 2
-    m_Value: 15.081014
+    m_Value: 2.8578837
   m_Ortho:
     m_Target: 0
     speed: 2
