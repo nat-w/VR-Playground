@@ -28,9 +28,11 @@ public class TeleportController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad)) {
+		// if player presses touchpad, send raycast
+		if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
 			RaycastHit hit;
 
+			// instantiates laser and reticle if not already existing
 			if (!laser && !reticle) {
 				laser = Instantiate(laserPrefab);
 				reticle = Instantiate(teleportReticlePrefab);
@@ -44,7 +46,7 @@ public class TeleportController : MonoBehaviour {
 					canTeleport = true;
 			 }
 		}
-		else if (laser && reticle) {
+		else if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && laser && reticle) {
 			Destroy(laser);
 			laser = null;
 			Destroy(reticle);
@@ -54,6 +56,7 @@ public class TeleportController : MonoBehaviour {
 		if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && canTeleport) {
 			Teleport();
 		}
+		canTeleport = false;
 	}
 
 	private void showLaser(RaycastHit hit) {
