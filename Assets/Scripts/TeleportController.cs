@@ -10,11 +10,9 @@ public class TeleportController : MonoBehaviour {
 	public Vector3 teleportReticleOffset;
 	public LayerMask teleportArea;
 	private GameObject laser;
-	private Transform laserTransform;
 	private Vector3 hitPoint;
 	private bool canTeleport;
 	private GameObject reticle;
-	private Transform teleportReticleTransform;
 
 	
 	// Get reference to controller
@@ -29,47 +27,45 @@ public class TeleportController : MonoBehaviour {
 		trackedObj = GetComponent<SteamVR_TrackedObject>();		
 	}
 
-	void Start() {
-		laser = Instantiate(laserPrefab);
-		laserTransform = laser.transform;
-		reticle = Instantiate(teleportReticlePrefab);
-		teleportReticleTransform = reticle.transform;
-	}
-
 	void Update() {
 		if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad)) {
 			RaycastHit hit;
 
+			if (!laser && !reticle) {
+				laser = Instantiate(laserPrefab);
+				reticle = Instantiate(teleportReticlePrefab);
+			}
+
 			if (Physics.Raycast(trackedObj.transform.position,
-				transform.forward, out hit, 100, teleportArea)) {
+				transform.TransformDirection(Vector3.forward), out hit, 100, teleportArea)) {
 					hitPoint = hit.point;
 					showLaser(hit);
-					reticle.SetActive(true);
-					teleportReticleTransform.position = hitPoint + teleportReticleOffset;
+					reticle.transform.position = hitPoint + teleportReticleOffset;
 					canTeleport = true;
 			 }
 		}
-		else {
-			laser.SetActive(false);
-			reticle.SetActive(false);
+		else if (laser && reticle) {
+			Destroy(laser);
+			laser = null;
+			Destroy(reticle);
+			reticle = null;
 		}
+
 		if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && canTeleport) {
 			Teleport();
 		}
 	}
 
 	private void showLaser(RaycastHit hit) {
-		laser.SetActive(true);
-		laserTransform.position = Vector3.Lerp(trackedObj.transform.position,
+		laser.transform.position = Vector3.Lerp(trackedObj.transform.position,
 			hitPoint, 0.5f);
-		laserTransform.LookAt(hitPoint);
-		laserTransform.localScale = new Vector3(laserTransform.localScale.x,
-			laserTransform.localScale.y, hit.distance);
+		laser.transform.LookAt(hitPoint);
+		laser.transform.localScale = new Vector3(laser.transform.localScale.x,
+			laser.transform.localScale.y, hit.distance);
 	}
 
 	private void Teleport() {
 		canTeleport = false;
-		reticle.SetActive(false);
 		Vector3 difference = cameraRigTransform.position - headTransform.position;
 		difference.y = 0;
 		cameraRigTransform.position = hitPoint + difference;
