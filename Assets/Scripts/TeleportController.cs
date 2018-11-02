@@ -32,18 +32,16 @@ public class TeleportController : MonoBehaviour {
 		if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
 			RaycastHit hit;
 
-			// instantiates laser and reticle if not already existing
-			if (!laser && !reticle) {
-				laser = Instantiate(laserPrefab);
-				reticle = Instantiate(teleportReticlePrefab);
-			}
-
-			if (Physics.Raycast(trackedObj.transform.position,
-				transform.TransformDirection(Vector3.forward), out hit, 100, teleportArea)) {
-					hitPoint = hit.point;
-					showLaser(hit);
-					reticle.transform.position = hitPoint + teleportReticleOffset;
-					canTeleport = true;
+			if (Physics.Raycast(trackedObj.transform.position, transform.TransformDirection(Vector3.forward), out hit, 100, teleportArea)) {
+				// instantiates laser and reticle if not already existing
+				if (!laser && !reticle) {
+					laser = Instantiate(laserPrefab);
+					reticle = Instantiate(teleportReticlePrefab);
+				}
+				hitPoint = hit.point;
+				showLaser(hit);
+				reticle.transform.position = hitPoint + teleportReticleOffset;
+				canTeleport = true;
 			 }
 		}
 		else if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && laser && reticle) {
@@ -56,15 +54,13 @@ public class TeleportController : MonoBehaviour {
 		if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && canTeleport) {
 			Teleport();
 		}
-		canTeleport = false;
 	}
 
 	private void showLaser(RaycastHit hit) {
 		laser.transform.position = Vector3.Lerp(trackedObj.transform.position,
 			hitPoint, 0.5f);
 		laser.transform.LookAt(hitPoint);
-		laser.transform.localScale = new Vector3(laser.transform.localScale.x,
-			laser.transform.localScale.y, hit.distance);
+		laser.transform.localScale = new Vector3(0.005f, 0.02f, hit.distance);
 	}
 
 	private void Teleport() {
