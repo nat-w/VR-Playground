@@ -206,8 +206,7 @@ public class SteamVR_ControllerManager : MonoBehaviour
 			{
 				var deviceClass = system.GetTrackedDeviceClass((uint)index);
 				if (deviceClass == ETrackedDeviceClass.Controller ||
-					deviceClass == ETrackedDeviceClass.GenericTracker ||
-					deviceClass == ETrackedDeviceClass.TrackingReference)
+					deviceClass == ETrackedDeviceClass.GenericTracker)
 				{
 					this.connected[index] = true;
 					changed = !changed; // if we clear and set the same index, nothing has changed
