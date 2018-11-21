@@ -5,6 +5,7 @@ Pick up foods, knock down bottles, and teleport around.
 
 ![](VR-Playground/Gifs/vr_1.gif)
 ![](VR-Playground/Gifs/vr_2.gif)
+![](VR-Playground/Gifs/vr_3.gif)
 
 
 
