@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\ControllerGrab.cs" />
      <Compile Include="Assets\Scripts\ControllerInput.cs" />
      <Compile Include="Assets\Scripts\TeleportController.cs" />
+     <Compile Include="Assets\Scripts\TrackerIndex.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
