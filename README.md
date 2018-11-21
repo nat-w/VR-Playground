@@ -1,7 +1,7 @@
 **VR Playground**
 
 VR environment to play around in.
-Pick up foods, knock down bottles, and teleport around.
+Pick up foods, knock down bottles, and teleport around. :banana:
 
 <img src=https://github.com/nat-w/VR-Playground/blob/master/Gifs/vr_1.gif width="400" height="400"/> <img src=https://github.com/nat-w/VR-Playground/blob/master/Gifs/vr_2.gif width="400" height="400"/>
 
